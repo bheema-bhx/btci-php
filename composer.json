@@ -1,0 +1,31 @@
+{
+  "name": "bheema-bhx/btci-php",
+  "type": "library",
+  "description": "Btci Merchants Pay library for PHP",
+  "version": "1.0.1",
+  "keywords": [
+    "btci",
+    "bitcoin",
+    "merchant"
+  ],
+  "homepage": "https://btci.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Btci",
+      "homepage": "https://github.com/bheema-bhx/"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "BtciPay\\": "lib/"
+    }
+  }
+}
