@@ -36,7 +36,7 @@ class Order extends Merchant
 
     public static function findOrFail($orderId, $options = array(), $authentication = array())
     {
-        $order = BtciPay::request('/orders/' . $orderId, 'GET', array(), $authentication);
+        $order = BtciPay::request('/merchant_orders/' . $orderId, 'GET', array(), $authentication);
 
         return new self($order);
     }
@@ -52,7 +52,7 @@ class Order extends Merchant
 
     public static function createOrFail($params, $options = array(), $authentication = array())
     {
-        $order = BtciPay::request('/orders', 'POST', $params, $authentication);
+        $order = BtciPay::request('/merchant_orders', 'POST', $params, $authentication);
 
         return new self($order);
     }

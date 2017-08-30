@@ -61,7 +61,7 @@ class BtciPay
             \BtciPay\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
         }
 
-        $url       = ($environment === 'sandbox' ? 'https://api-sandbox.btci.com/v1' : 'https://api.btci.com/v1') . $url;
+        $url       = ($environment === 'sandbox' ? 'https://btci.com' : 'https://btci.com') . $url;
         $nonce     = (int)(microtime(true) * 1e6);
         $message   = $nonce . $app_id . $app_key;
         $signature = hash_hmac('sha256', $message, $app_secret);
